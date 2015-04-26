@@ -12,7 +12,7 @@ keywords:
   - nodebrew
 script: |
   sudo apt-get update
-  sudo apt-get install -y curl perl build-essential
+  sudo apt-get install -y curl perl build-essential git
 
   curl -L git.io/nodebrew | perl - setup
   export PATH=$HOME/.nodebrew/current/bin:$PATH
