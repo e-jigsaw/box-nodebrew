@@ -1,0 +1,22 @@
+name: nodebrew
+description: nodebrew on Ubuntu 14.04
+version: 0.0.3
+platform: ubuntu@14.04
+type: main
+packages:
+  - nodebrew@0.8.1
+keywords:
+  - iojs
+  - io.js
+  - node.js
+  - nodebrew
+script: |
+  sudo apt-get update
+  sudo apt-get install -y curl perl build-essential
+
+  curl -L git.io/nodebrew | perl - setup
+  export PATH=$HOME/.nodebrew/current/bin:$PATH
+  echo 'export PATH=$HOME/.nodebrew/current/bin:$PATH' >> $HOME/.bash_profile
+
+  nodebrew install-binary io@v1.8.1
+  nodebrew use io@v1.8.1
