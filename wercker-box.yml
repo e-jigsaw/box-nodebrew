@@ -1,6 +1,6 @@
 name: nodebrew
 description: nodebrew on Ubuntu 14.04
-version: 0.0.3
+version: 0.1.0
 platform: ubuntu@14.04
 type: main
 packages:
